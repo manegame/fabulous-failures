@@ -72,6 +72,12 @@
   -ms-overflow-style: none;
 }
 
+@mixin skew($degree) {
+  display: inline-block;
+  transform: skewX($degree);
+  -webkit-transform: skewX($degree);
+}
+
 ///
 /// Credit: thoughtbot - http://robots.thoughtbot.com/sasss-content-directive
 ///

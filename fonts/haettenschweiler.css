@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Haettenschweiler";
+    src: url("haettenschweiler.eot");
+    src: url("haettenschweiler.eot?#iefix") format("embedded-opentype"),
+         url("haettenschweiler.woff2") format("woff2"),
+         url("haettenschweiler.woff") format("woff"),
+         url("haettenschweiler.ttf") format("ttf"),
+         url("haettenschweiler.svg#Haettenschweiler") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}

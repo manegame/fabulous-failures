@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "AkzidenzGroteskBQ-Light";
+    src: url("AkzidenzGrotesk-Light.eot");
+    src: url("AkzidenzGrotesk-Light.eot?#iefix") format("embedded-opentype"),
+         url("AkzidenzGrotesk-Light.woff2") format("woff2"),
+         url("AkzidenzGrotesk-Light.woff") format("woff"),
+         url("AkzidenzGrotesk-Light.ttf") format("ttf"),
+         url("AkzidenzGrotesk-Light.svg#AkzidenzGroteskBQ-Light") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

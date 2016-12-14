@@ -5,13 +5,6 @@
   }
 }
 
-body, html {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  cursor: none;
-}
-
 body {
   background: $background-color;
   color: $main-color;
@@ -36,42 +29,79 @@ a {
   }
 }
 
-.screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-    transform: scale(1.1);
-    &.active {
-      opacity: 1;
-      transition: opacity 1s ease-out;
-    }
-    &.close {
-      transform: scale(1.5);
-      transform-origin: 50% 50%;
-    }
-    $unit: 0%;
-    $horz: 0;
-    @while $horz < 100 {
-      $vert: 0;
-      @while $vert < 100 {
-        &.pan-#{$horz}-#{$vert} {
-          transform-origin: $horz + $unit $vert + $unit;
-        }
-        $vert: $vert + 20;
-      }
-      $horz: $horz + 20;
+p {
+  font-family: $system-stack;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// DISPLAY TYPE
+
+$list: jonathan malou joel;
+
+
+@each $author in $list {
+  .project-#{$author} {
+    
+    &:before {
+      // content: '#{$author}';
     }
   }
 }
+
+.titles {
+  display: none;
+}
+
+h1 {
+  margin-left: 24px;
+  font-family: $display-stack;
+  font-size: $font-size-large;
+  line-height: $line-height-large;
+  letter-spacing: -1px;
+  transition: all .3s linear;
+  span {
+      &.letter {
+        background-color: $main-color;
+        color: $background-color;
+        background-blend-mode: mutiply;
+        transition: all .3s linear;
+        cursor: pointer;
+        &:hover {
+          margin: 0 2px;
+        }
+        &.slant-1 {
+         @include skew(-1deg); 
+        }
+        &.slant-2 {
+         @include skew(-2deg);
+        }
+        &.slant-3 {
+         @include skew(-3deg);
+        }
+        &.slant-4 {
+         @include skew(-4deg);
+        }
+        &.slant-5 {
+         @include skew(-5deg);
+        }
+        &.slant-6 {
+         @include skew(-6deg);
+        }
+        &.slant-7 {
+         @include skew(-7deg);
+        }
+        &.slant-8 {
+         @include skew(-8deg);
+        }
+        &.slant-9 {
+         @include skew(-9deg);
+        }
+        &.slant-10 {
+         @include skew(-10deg);
+        }
+      }
+  }
+}
+
+// END DISPLAY TYPE

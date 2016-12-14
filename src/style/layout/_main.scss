@@ -1,0 +1,15 @@
+#logo {
+	@include center;
+	width: 800px;
+	height: 800px;
+	z-index: -1;
+}
+
+.info {
+	position: absolute;
+	width: 30%;
+	bottom: 4%;
+	right: 2%;
+	height: auto;
+	border: 1px solid black; 
+}

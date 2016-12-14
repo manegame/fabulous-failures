@@ -5,6 +5,7 @@ const gulp            = require('gulp'),
       plumber         = require('gulp-plumber'),
       cssnano         = require('gulp-cssnano'),
       sass            = require('gulp-sass'),
+      fontgen         = require('gulp-fontgen'),
       notify          = require('gulp-notify'),
       imagemin        = require('gulp-imagemin'),
       pngquant        = require('imagemin-pngquant'),
@@ -67,12 +68,12 @@ gulp.task('images', () => {
 });
 
 // Generate webfonts
-// gulp.task('font', function () {
-//   return gulp.src("./src/fonts/*.{ttf,otf}")
-//     .pipe(fontgen({
-//       dest: "./fonts/"
-//     }));
-// });
+gulp.task('font', function () {
+  return gulp.src("./src/fonts/*.{ttf,otf}")
+    .pipe(fontgen({
+      dest: "./fonts/"
+    }));
+});
 
 // Watch for changes in files
 gulp.task('watch', function () {
@@ -90,7 +91,7 @@ gulp.task('watch', function () {
   gulp.watch('src/img/*', ['images']);
 
   // Watch fonts
-  // gulp.watch('src/fonts/*.{ttf,otf}"', ['font']);
+  gulp.watch('src/fonts/*.{ttf,otf}"', ['font']);
 });
 
 // Analyze CSS
@@ -100,7 +101,7 @@ gulp.task('parker', function () {
 });
 
 // Default Task
-gulp.task('default', ['scripts', 'sass', 'watch', 'browser-sync', 'images']);
+gulp.task('default', ['scripts', 'sass', 'watch', 'browser-sync', 'images', 'font']);
 
 function sassErrorAlert(error) {
   notify.onError({

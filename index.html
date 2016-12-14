@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#000">
+  <meta name="theme-color" content="#FF00FF">
 
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -23,7 +23,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 
-  <title>SERF CLUB</title>
+  <title>Fabulous Failures</title>
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@pwr_studio" />
@@ -35,16 +35,25 @@
   <meta property="og:image" content="">
   <meta property="og:description" content="" />
 
+  <link href='fonts/haettenschweiler.css' rel="stylesheet" type="text/css">
+  <link href='fonts/AkzidenzGrotesk-Light.css' rel="stylesheet" type="text/css">
   <link href='style.css' rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
-  <div id='screen' class='screen' >
-    <img :src='screenOne.url' v-bind:class="screenOne.classObject">
-    <img :src='screenTwo.url' v-bind:class="screenTwo.classObject">
+  <div class="titles">
+    <h1 class="project-alberto">Alberto Maserin</h1>
+    <h1 class="project-jonathan">Jonathan Hielkema</h1>
+    <h1 class="project-daniel">Daniël Siegersma</h1>
+    <h1 class="project-hanane">Hanane El Ouardani</h1>
+    <h1 class="project-nathan">Nathan Noorduijn</h1>
   </div>
+
+  <div class="info"></div>
+
+  <img src="img/logo.svg" id="logo"/>
 
   <script src='app.min.js'></script>
 
